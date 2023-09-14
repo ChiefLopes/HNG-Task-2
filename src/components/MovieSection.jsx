@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import PropTypes from "prop-types";
+// import MovieCard from "./MovieCard";
+
 
 const MovieSection = () => {
   const [listMovies, setListMovies] = useState([]);
@@ -19,16 +20,21 @@ const MovieSection = () => {
 
   return (
     <>
-      <div className="grid grid-cols-4 gap space-x">
-        {top10Movies.map((movie) => (
-          <div  key={movie.id}>
-            <img
-              key={movie.id}
-              src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-              alt="movie posters"
-            />
-          </div>
-        ))}
+          <div>
+              <div>
+                  <h1 className=" text-stone-950 text">Featured Movies</h1>
+              </div>
+        <div className="grid grid-cols-4 gap-7 py-4 space-x ">
+          {top10Movies.map((movie) => (
+            <div key={movie.id}>
+              <img
+                key={movie.id}
+                src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                alt="movie posters"
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </>
   );
