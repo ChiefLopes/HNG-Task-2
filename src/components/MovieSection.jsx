@@ -20,9 +20,11 @@ const MovieSection = () => {
   console.log(top10Movies);
 
   return (
-    <>  <div>
-        <div className=" mt-10 mb-5 mx-12 flex justify-between  ">
-         <p className=" text-black ">Featured Movies</p>
+    <>
+      {" "}
+      <div>
+        <div className=" mt-10 mb-5 mx-12 flex justify-between">
+          <span className="text-zinc-950 text-4xl font-medium ml-4 ">Featured Movies</span>
           <span className=" text-red-800 ">See more &gt; </span>
         </div>
         <div className="grid grid-cols-4 gap-7 space-x ">
