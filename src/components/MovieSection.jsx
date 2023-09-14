@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import PropTypes from "prop-types";
 
 const MovieSection = () => {
   const [listMovies, setListMovies] = useState([]);
@@ -13,22 +14,24 @@ const MovieSection = () => {
   useEffect(() => {
     getMovies();
   }, []);
-    
-    console.log(listMovies);
 
-    return (
-      <>
-        <div className="">
-          {listMovies.map((movie) => (
+  const top10Movies = listMovies.slice(0, 10);
+
+  return (
+    <>
+      <div className="grid grid-cols-4 gap space-x">
+        {top10Movies.map((movie) => (
+          <div  key={movie.id}>
             <img
-              key={movie.id} 
+              key={movie.id}
               src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
               alt="movie posters"
             />
-          ))}
-        </div>
-      </>
-    );
+          </div>
+        ))}
+      </div>
+    </>
+  );
 };
 
 export default MovieSection;
