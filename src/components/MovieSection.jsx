@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-// import MovieCard from "./MovieCard";
-
+import MovieCard from "./MovieCard";
 
 const MovieSection = () => {
   const [listMovies, setListMovies] = useState([]);
@@ -18,21 +17,18 @@ const MovieSection = () => {
 
   const top10Movies = listMovies.slice(0, 10);
 
+  console.log(top10Movies);
+
   return (
-    <>
-          <div>
-              <div>
-                  <h1 className=" text-stone-950 text">Featured Movies</h1>
-              </div>
-        <div className="grid grid-cols-4 gap-7 py-4 space-x ">
-          {top10Movies.map((movie) => (
-            <div key={movie.id}>
-              <img
-                key={movie.id}
-                src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                alt="movie posters"
-              />
-            </div>
+    <>  <div>
+        <div className=" mt-10 mb-5 mx-12 flex justify-between  ">
+         <p className=" text-black ">Featured Movies</p>
+          <span className=" text-red-800 ">See more &gt; </span>
+        </div>
+        <div className="grid grid-cols-4 gap-7 space-x ">
+          {listMovies.map((movie) => (
+            // Render the MovieCard component for each movie in the listMovies array
+            <MovieCard key={movie.id} movie={movie} />
           ))}
         </div>
       </div>
