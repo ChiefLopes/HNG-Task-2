@@ -30,7 +30,6 @@ const MovieSection = () => {
         </div>
         <div className="grid grid-cols-4 gap-7 space-x ">
           {top10Movies.map((movie) => (
-            // Render the MovieCard component for each movie in the listMovies array
             <MovieCard key={movie.id} movie={movie} />
           ))}
         </div>
