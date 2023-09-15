@@ -1,4 +1,5 @@
 import "./App.css";
+import Footer from "./components/Footer";
 import Hero from "./components/Hero.jsx";
 import MovieSection from "./components/MovieSection";
 
@@ -7,6 +8,7 @@ function App() {
     <div className="App">
       <Hero />
       <MovieSection />
+      <Footer />
     </div>
   );
 }
