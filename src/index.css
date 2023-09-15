@@ -27,3 +27,11 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
+.icon-svg {
+  fill: #D1D5DB; /* Default fill color */
+  transition: fill 0.3s ease; /* Smooth transition on fill color */
+}
+
+.icon-svg:hover {
+  fill: #FF0000; /* New fill color when hovered over (red in this case) */
+}
