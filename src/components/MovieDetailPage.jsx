@@ -14,7 +14,7 @@ const MovieDetailPage = () => {
         </p>
       </div>
       <div className="  text-zinc-950 ">
-        <div className=" flex ">
+        <div className=" flex my-10">
           <img src={Home} alt="" />
           <p>Home</p>
         </div>
@@ -26,7 +26,7 @@ const MovieDetailPage = () => {
           <img src={TvScreen} alt="" />
           <p>TV Series</p>
         </div>
-              <div className="flex">
+              <div className="flex ">
                   <img src={Calendar} alt="" />
           <p>Upcoming</p>
         </div>
