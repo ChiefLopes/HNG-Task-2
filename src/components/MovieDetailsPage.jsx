@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 
 const MovieDetailsPage = () => {
   const { id } = useParams(); // Get the :id parameter from the URL
-  const [movieDetails, setMovieDetails] = useState([]);
+  const [movieDetails, setMovieDetails] = useState(null);
 
   useEffect(() => {
     // Fetch movie details using the id parameter
@@ -11,8 +11,7 @@ const MovieDetailsPage = () => {
       .then((response) => response.json())
       .then((data) => setMovieDetails(data))
       .catch((error) => console.error("Error fetching data:", error));
-  }, [id]);
-  // Trigger the fetch when the id parameter changes
+  }, [id]); // Trigger the fetch when the id parameter changes
 
   if (!movieDetails) {
     return <div>Loading...</div>;
