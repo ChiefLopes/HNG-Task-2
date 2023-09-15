@@ -11,6 +11,7 @@ const Footer = () => {
                 <img src={twitter} alt="twitter" />
                 <img src={Youtube} alt="youtube" />
             </div>
+            <div className="descriptions"></div>
         </div>
     </>;
 };
