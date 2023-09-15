@@ -3,21 +3,22 @@ import { useParams } from "react-router-dom";
 
 const MovieDetailsPage = () => {
   const { id } = useParams(); // Get the :id parameter from the URL
-  const [movieDetails, setMovieDetails] = useState(null);
+  const [movieDetails, setMovieDetails] = useState([]);
 
   useEffect(() => {
     // Fetch movie details using the id parameter
-    fetch(`"https://api.themoviedb.org/3/movie/${id}`)
+    fetch(`https://api.themoviedb.org/3/movie/${id}`)
       .then((response) => response.json())
       .then((data) => setMovieDetails(data))
       .catch((error) => console.error("Error fetching data:", error));
-  }, [id]); // Trigger the fetch when the id parameter changes
+  }, [id]);
+  // Trigger the fetch when the id parameter changes
 
   if (!movieDetails) {
     return <div>Loading...</div>;
   }
-    
-    console.log(movieDetails);
+
+  console.log(movieDetails);
 
   return (
     <div>
