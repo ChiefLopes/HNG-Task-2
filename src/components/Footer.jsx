@@ -11,12 +11,12 @@ const Footer = () => {
                 <img src={twitter} alt="twitter" />
                 <img src={Youtube} alt="youtube" />
             </div>
-            <div className="descriptions text-zinc-800 text-lg  flex justify-center space-x-10 mt-7 font-medium">
+            <div className="descriptions text-zinc-800 text-xl  flex justify-center space-x-10 mt-7 font-medium">
                 <p>Conditions Of Use</p>
                 <p>Privacy & policy</p>
                 <p>Press Room</p>
             </div>
-            <div className=" text-slate-600">&copy;</div>
+            <div className=" text-slate-600 my-9 flex justify-center text-xl font-medium space-x-4">&copy; 2023 MovieBox By ChiefLopes</div>
         </div>
     </>;
 };
