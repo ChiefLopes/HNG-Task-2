@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import imdb from "../assets/images/imdb.svg";
 import tomato from "../assets/images/tomato.svg"
+import favIcon from "../assets/images/Favorite.svg"
 
 const MovieCard = ({ movie }) => {
     
