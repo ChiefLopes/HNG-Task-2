@@ -1,18 +1,17 @@
 import PropTypes from "prop-types";
 import imdb from "../assets/images/imdb.svg";
-import tomato from "../assets/images/tomato.svg"
-import favIcon from "../assets/images/Favorite.svg"
+import tomato from "../assets/images/tomato.svg";
+import favIcon from "../assets/images/Favorite.svg";
 
 const MovieCard = ({ movie }) => {
-    
-    function generateRandomPercentageAbove40() {
-      const randomDecimal = Math.random() * 60; // Range from 0 to 59
-      const randomPercentage = randomDecimal + 40; // Shift range to start from 40%
-      return randomPercentage.toFixed(2); // Limit to two decimal places
-    }
-    
-    const randomPercentage = generateRandomPercentageAbove40();
-    
+  function generateRandomPercentageAbove40() {
+    const randomDecimal = Math.random() * 60; // Range from 0 to 59
+    const randomPercentage = randomDecimal + 40; // Shift range to start from 40%
+    return randomPercentage.toFixed(2); // Limit to two decimal places
+  }
+
+  const randomPercentage = generateRandomPercentageAbove40();
+
   const genresData = {
     genres: [
       {
@@ -103,16 +102,21 @@ const MovieCard = ({ movie }) => {
   }
 
   return (
-    <div data-testid="movie-card" className="bg-white rounded-lg shadow-md p-4">
+    <div
+      data-testid="movie-card"
+      className="bg-white rounded-lg shadow-md p-4 relative">
       <img
         data-testid="movie-poster"
         src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
         alt={movie.title}
         className="w-full rounded-lg mb-2 "
+      />{" "}
+      <img
+        src={favIcon}
+        alt=""
+        className=" transition-transform hover:scale-110 hover:rotate-180 hover:text-red-700 absolute top-7 right-8"
       />
-
       <p className="text-gray-600 mb-4">USA, 2016</p>
-
       <p className="text-zinc-950 font-semibold mb-2 text-xl">{movie.title}</p>
       <div className=" flex justify-between">
         <p data-testid="movie-release-date" className="text-gray-600 mb-3">
