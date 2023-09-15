@@ -5,13 +5,18 @@ import Youtube from "../assets/Socials/youtube.svg";
 const Footer = () => {
     return <>
         <div>
-            <div className="socials flex justify-center my-[10rem] space-x-7 ">
+            <div className="socials flex justify-center mt-[10rem] space-x-7 ">
                 <img src={facebook} alt="facebook" />
                 <img src={instagram} alt="instagram" />
                 <img src={twitter} alt="twitter" />
                 <img src={Youtube} alt="youtube" />
             </div>
-            <div className="descriptions"></div>
+            <div className="descriptions text-zinc-800 text-lg  flex justify-center space-x-10 mt-7 font-medium">
+                <p>Conditions Of Use</p>
+                <p>Privacy & policy</p>
+                <p>Press Room</p>
+            </div>
+            <div className=" text-slate-600">&copy;</div>
         </div>
     </>;
 };
