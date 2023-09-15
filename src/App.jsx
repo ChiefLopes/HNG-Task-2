@@ -1,15 +1,16 @@
-import './App.css'
+import "./App.css";
 import Hero from "./components/Hero.jsx";
-import MovieSection from './components/MovieSection';
+import MovieDetailsPage from "./components/MovieDetailsPage";
+import MovieSection from "./components/MovieSection";
 
 function App() {
-
   return (
-     <div className="App">
-          <Hero />
-          <MovieSection />
-     </div>
-  )
+    <div className="App">
+      <Hero />
+      <MovieSection />
+      <MovieDetailsPage />
+    </div>
+  );
 }
 
-export default App
+export default App;

@@ -107,7 +107,7 @@ const MovieCard = ({ movie }) => {
         data-testid="movie-poster"
         src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
         alt={movie.title}
-        className="w-full rounded-lg mb-2"
+        className="w-full rounded-lg mb-2 "
       />
 
       <p className="text-gray-600 mb-4">USA, 2016</p>
