@@ -114,7 +114,7 @@ const MovieCard = ({ movie }) => {
       <img
         src={favIcon}
         alt=""
-        className=" transition-transform hover:scale-110 hover:rotate-180 absolute top-7 right-8 hover:text-4xl hover:text-red-700"
+        className=" transition-transform hover:scale-110 hover:rotate-180 absolute top-7 right-8 hover:text-4xl hover:bg-red-700h"
       />
       <p className="text-gray-600 mb-4">USA, 2016</p>
       <p className="text-zinc-950 font-semibold mb-2 text-xl">{movie.title}</p>
